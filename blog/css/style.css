@@ -1,0 +1,238 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* Imported Fonts */
+
+@font-face {
+    font-family: "ultra";
+    src: url('../fonts/serif/ultra-regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("../fonts/sans-serif/roboto-regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/sans-serif/lato-regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Typography */
+
+p, time {
+    font-family: roboto, Arial, sans-serif;
+    line-height: 32px;   
+    margin-bottom: 30px; 
+}
+
+h1, h2, h3, h4 {
+    font-family: lato, Helvetica, sans-serif;
+    letter-spacing: 0.0325rem;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+    transform: rotate(-5deg);
+}
+
+.highlight {
+    display: inline-block;
+    font-family: ultra, Georgia, serif;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: beige;
+    background-color: darkred ;
+    box-shadow: 5px 5px 4px -1px #888;
+}
+
+nav ul li a:hover {
+    transform: rotate(-5deg);
+    text-transform: uppercase;
+    text-decoration-line: line-through;
+    text-decoration-color: black;
+}
+
+footer p {
+    margin-bottom: 0.25rem;
+}
+
+/* General Setup and Defaults */
+/* From Skills Check 6 "school-site" stylesheet */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+
+/* Layout */
+
+header {
+    padding: 0.5rem 0.5rem 0.5rem 0rem;
+    text-align: center;
+}
+
+
+nav {
+    margin-top: 3rem;
+}
+
+li {
+    display: inline;
+}
+
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    padding-left: 1.75rem;
+    border-left: 1px solid darkgray;
+}
+
+aside p {
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 1.5rem;
+}
+
+.expand {
+    font-size: 0.125rem;
+    letter-spacing: 0.0325rem;
+}
+
+.subsection {
+    display: flex;
+}
+
+/* Images and Figures */
+
+img {
+    width: 100%;
+    box-shadow: 5px 5px 4px -1px #888;
+}
+
+figure {
+    margin: 0px;
+}
+
+.article-image {
+    width: 33%;
+    float: left;
+    margin: auto 2rem 0.5rem auto ;
+}
+
+.subsection {
+    margin: 1rem 0rem;
+}
+
+.subsection figure {
+    margin: 0rem 0.5rem;
+    background-color: whitesmoke;
+}
+
+.subsection figure figcaption {
+    padding: 0.5rem 0.5rem;
+    font-family: lato, Arial, sans-serif;
+}
+
+.tilt {
+    display: inline-block;
+    color: #8b0000;
+    transform: rotate(-2.5deg);
+    margin: auto 0.25rem auto 0.25rem;
+}
+
+/* Links & Navigation */
+
+a {
+    text-decoration: none;
+    color: #8b0000;
+}
+
+nav a { 
+    display: inline-block;
+    padding: 1.25rem 2rem;
+    font-size: 1.5rem; 
+    font-family: lato, Arial, sans-serif;
+    color: #8b0000;
+}
+
+nav {
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+}   
